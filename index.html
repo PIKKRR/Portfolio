@@ -4,21 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mi Portfolio</title>
+  <title>Mi Logro en DynamicGamers y Mi Trabajo Actual</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Trabajo Actual -->
-  <header class="section-header">
-    <h1>Trabajo Actual - Responsable de Base de Datos y ERP</h1>
-    <p class="duration">2018 - Actualidad</p>
-  </header>
-
   <section class="content">
     <div class="container">
+      <div class="header-section">
+        <h1>Trabajo Actual - Responsable de Base de Datos y ERP</h1>
+        <p class="duration">2018 - Actualidad</p>
+      </div>
+
       <p>Desde 2018, formo parte de <strong>INSTALACIONES CEDIAL, S.L.</strong>, donde soy responsable de la gestión y optimización de la base de datos en un ERP utilizado en el almacén de fontanería.</p>
-      
+
       <div class="achievements">
         <h3>Responsabilidades y Logros</h3>
         <ul>
@@ -34,10 +33,11 @@
     </div>
   </section>
 
-  <!-- DynamicGamers -->
-  <header class="section-header">
-    <h1>DynamicGamers - Fundador y Director de Comunidad</h1>
-    <p class="duration">2011 - 2014</p>
+  <header>
+    <div class="container">
+      <h1>DynamicGamers - Fundador y Director de Comunidad</h1>
+      <p class="duration">2011 - 2014</p>
+    </div>
   </header>
 
   <section class="content">
@@ -64,5 +64,48 @@
     </div>
   </footer>
 
+  <!-- Botón "Volver al Inicio" -->
+  <button id="scrollTopBtn" onclick="scrollToTop()">⬆️</button>
+
+  <!-- Código JavaScript -->
+  <script>
+    // Efecto de desplazamiento suave al hacer clic en enlaces
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Mostrar elementos al hacer scroll
+    const items = document.querySelectorAll('.content, .header-section');
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.innerHeight + window.scrollY;
+      items.forEach(item => {
+        if (item.offsetTop < scrollPosition - 50) {
+          item.style.opacity = 1;
+          item.style.transform = 'translateY(0)';
+        }
+      });
+    });
+
+    // Mostrar el botón "Volver al Inicio" al desplazarse hacia abajo
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  </script>
+
 </body>
 </html>
+
