@@ -7,9 +7,9 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  line-height: 1.6;
   background-color: #f4f4f4;
   color: #333;
+  line-height: 1.6;
 }
 
 .container {
@@ -24,6 +24,7 @@ header {
   color: #fff;
   padding: 30px 0;
   text-align: center;
+  border-bottom: 4px solid #2980b9;
 }
 
 header h1 {
@@ -31,14 +32,9 @@ header h1 {
   margin-bottom: 10px;
 }
 
-header .role {
+header .duration {
   font-size: 1.2rem;
   font-weight: 300;
-}
-
-header .duration {
-  font-size: 1.1rem;
-  font-style: italic;
   color: #bdc3c7;
 }
 
@@ -68,6 +64,7 @@ header .duration {
 
 .achievements ul {
   list-style: none;
+  padding-left: 0;
 }
 
 .achievements li {
@@ -92,12 +89,14 @@ footer {
   color: #fff;
   padding: 20px 0;
   text-align: center;
+  border-top: 4px solid #2980b9;
 }
 
 footer p {
   font-size: 1rem;
 }
 
+/* Responsiveness */
 @media screen and (max-width: 768px) {
   header h1 {
     font-size: 2rem;
