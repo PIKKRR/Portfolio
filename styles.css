@@ -110,4 +110,30 @@ footer p {
   .achievements li {
     font-size: 1rem;
   }
+
+  /* Estilos de animación */
+.content, .header-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Botón "Volver al Inicio" */
+#scrollTopBtn {
+  display: none; /* Se mostrará al desplazarse hacia abajo */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#scrollTopBtn:hover {
+  background-color: #2c3e50;
 }
