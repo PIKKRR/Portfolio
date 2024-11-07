@@ -18,7 +18,7 @@ body {
   max-width: 1200px;
 }
 
-/* Header */
+/* Header Section */
 header {
   background-color: #2c3e50;
   color: #fff;
@@ -83,33 +83,6 @@ header .duration {
   top: 0;
 }
 
-/* New Content Section (Trabajo Actual) */
-.header-section-wrapper {
-  background-color: #2c3e50; 
-  color: white;
-  padding: 30px 0;
-  text-align: center;
-  margin-bottom: 20px;
-  border-bottom: 4px solid #2980b9;
-}
-
-.header-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.header-section h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-.header-section .duration {
-  font-size: 1.2rem;
-  font-weight: 300;
-  color: #bdc3c7;
-}
-
 /* Footer */
 footer {
   background-color: #2c3e50;
@@ -125,8 +98,7 @@ footer p {
 
 /* Responsiveness */
 @media screen and (max-width: 768px) {
-  header h1,
-  .header-section h1 {
+  header h1 {
     font-size: 2rem;
   }
 
@@ -136,9 +108,5 @@ footer p {
 
   .achievements li {
     font-size: 1rem;
-  }
-
-  .content h1 {
-    font-size: 1.5rem;
   }
 }
