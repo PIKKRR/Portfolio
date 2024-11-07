@@ -26,9 +26,6 @@ header, .header-section {
   text-align: center;
   border-bottom: 4px solid #2980b9;
   width: 100%;
-  position: relative;
-  left: 0;
-  right: 0;
 }
 
 header h1, .header-section h1 {
